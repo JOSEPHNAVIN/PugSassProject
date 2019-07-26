@@ -1,0 +1,81 @@
+body{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.jumbotron {
+  background-image: url("http://www.fullhdwpp.com/wp-content/uploads/Sunrise-Skyscapes-20_www.FullHDWpp.com_.jpg");
+  background-size: cover;
+  color: white;
+  position: relative;
+  display: block;
+  min-height: 450px;
+
+  &-content {
+      text-align: center;
+      padding-top: 100px;
+      top:60px;
+  }
+}
+  
+  
+  //main
+  
+  .accordion-option {
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 15px 0;
+  }
+  
+  .accordion-option .title {
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .accordion-option .toggle-accordion {
+    float: right;
+    font-size: 16px;
+    color: #6a6c6f;
+  }
+  
+  .accordion-option .toggle-accordion:before {
+    content: "Expand All";
+  }
+  
+  .accordion-option .toggle-accordion.active:before {
+    content: "Collapse All";
+  }
+
+  .accordion{
+    button{
+      color: black;
+    }
+  }
+  .btn.btn-link::after{
+    content: "-";
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+
+  }
+  .btn.btn-link.collapsed::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    top:10px;
+    font-size: 30px;
+  }
+  .btn.btn-primary{
+    margin: 10px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border-color: black;
+    box-shadow: black;
+
+  }

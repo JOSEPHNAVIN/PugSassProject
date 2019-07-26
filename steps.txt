@@ -1,0 +1,11 @@
+create a project in directory 
+open project in vs code terminal
+    npm init(making a new package)
+        all enter
+    install 4 things
+        npm install gulp-cli -g
+        npm install --save-dev gulp gulp-sass gulp-pug browser-sync
+create folders sass
+
+    
+open package.json
