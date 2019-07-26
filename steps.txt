@@ -2,10 +2,18 @@ create a project in directory
 open project in vs code terminal
     npm init(making a new package)
         all enter
-    install 4 things
+    install ...
         npm install gulp-cli -g
         npm install --save-dev gulp gulp-sass gulp-pug browser-sync
-create folders sass
+create folders sass,pug,js in your project
 
     
 open package.json
+	type gulp commands for running of environment
+
+write pug,sass,js files 
+run with gulp watch
+
+open local/3000/dist/<page.html>
+
+voi la
