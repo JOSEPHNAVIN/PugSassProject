@@ -10,15 +10,16 @@ html(lang="en")
         script(src="js/jquery-3.2.1.js")
         
     body
-        .jumbotron(itemscope)
-            .jumbotron-content
-                h1.display-4(itemprop="heroTitle") Jumbotron
-                p.lead(itemprop="heroContent")
-                    | This is a simple hero unit.
-                //hr.my-4
+        .header
+            .jumbotron(itemscope)
+                .jumbotron-content
+                    h1.display-4(itemprop="heroTitle") Jumbotron
+                    p.lead(itemprop="heroContent")
+                        | This is a simple hero unit.
+                    //hr.my-4
+                
         
-    
-        
+            
         //nav bar
         nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top(itemscope)
             a.navbar-brand(href='#',itemprop=brand) Navbar
@@ -41,78 +42,78 @@ html(lang="en")
                             a.dropdown-item(href='#') Action
                             a.dropdown-item(href='#') Another action
                             a.dropdown-item(href='#') Something else here
-        //carousel
-        
-        #carouselExampleIndicators.carousel.slide(data-ride='carousel')
-            ol.carousel-indicators
-                li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
-                li(data-target='#carouselExampleIndicators', data-slide-to='1')
-                li(data-target='#carouselExampleIndicators', data-slide-to='2')
-            .carousel-inner
-                .carousel-item.active
-                    img.d-block.w-100(src='http://hdwpro.com/wp-content/uploads/2017/01/Car-Full-HD-Wallpaper.jpg')
-                .carousel-item
-                    img.d-block.w-100(src='https://newevolutiondesigns.com/images/freebies/hd-wallpaper-27.jpg')
-                .carousel-item
-                    img.d-block.w-100(src='http://getwallpapers.com/wallpaper/full/9/5/9/203235.jpg')
-            a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
-                span.carousel-control-prev-icon(aria-hidden='true')
-                span.sr-only Previous
-            a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
-                span.carousel-control-next-icon(aria-hidden='true')
-                span.sr-only Next
+            //carousel
+        .content   
+            #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                ol.carousel-indicators
+                    li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='1')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='2')
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block.w-100(src='https://data.1freewallpapers.com/download/toyota-gt86-car-desert.jpg')
+                    .carousel-item
+                        img.d-block.w-100(src='http://hdwpro.com/wp-content/uploads/2017/01/Car-Full-HD-Wallpaper.jpg')
+                    .carousel-item
+                        img.d-block.w-100(src='http://getwallpapers.com/wallpaper/full/9/5/9/203235.jpg')
+                a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.sr-only Previous
+                a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
 
-        //modal
-        block modal
-            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal', data-whatever='@mdo') Open modal for @mdo
-            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal', data-whatever='@fat') Open modal for @fat
-            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal', data-whatever='@getbootstrap') Open modal for @getbootstrap
-            #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
-                .modal-dialog(role='document')
-                    .modal-content
-                        .modal-header
-                            h5#exampleModalLabel.modal-title New message
-                            button.close(type='button', data-dismiss='modal', aria-label='Close')
-                                span(aria-hidden='true') ×
-                        .modal-body
-                            form
-                                .form-group
-                                    label.col-form-label(for='recipient-name') Recipient:
-                                    input#recipient-name.form-control(type='text',placeholder='address of recepient')
-                                .form-group
-                                    label.col-form-label(for='message-text') Message:
-                                    textarea#message-text.form-control
-                        .modal-footer
-                            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-                            button.btn.btn-primary(type='button') Send message
+            //modal
+            block modal
+                button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal', data-whatever='@mdo') Open modal for @mdo
+                button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal', data-whatever='@fat') Open modal for @fat
+                button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal', data-whatever='@getbootstrap') Open modal for @getbootstrap
+                #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+                    .modal-dialog(role='document')
+                        .modal-content
+                            .modal-header
+                                h5#exampleModalLabel.modal-title New message
+                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                    span(aria-hidden='true') ×
+                            .modal-body
+                                form
+                                    .form-group
+                                        label.col-form-label(for='recipient-name') Recipient:
+                                        input#recipient-name.form-control(type='text',placeholder='address of recepient')
+                                    .form-group
+                                        label.col-form-label(for='message-text') Message:
+                                        textarea#message-text.form-control
+                            .modal-footer
+                                button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                                button.btn.btn-primary(type='button') Send message
 
-        
-        //accordion
-        #accordionExample.accordion
-            .card
-                #headingOne.card-header
-                    h2.mb-0
-                        button.btn.btn-link.collapsed(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
-                            | Collapsible Group Item #1
-                #collapseOne.collapse(aria-labelledby='headingOne', data-parent='#accordionExample')
-                    .card-body
-                        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            .card
-                #headingTwo.card-header
-                    h2.mb-0
-                        button.btn.btn-link.collapsed( type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-                            | Collapsible Group Item #2
-                #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionExample')
-                    .card-body
-                        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            .card
-                #headingThree.card-header
-                    h2.mb-0
-                        button.btn.btn-link.collapsed(type='button', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
-                            | Collapsible Group Item #3
-                #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionExample')
-                    .card-body
-                        | Anim pariatur cliche  reprehendert, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        .footer   
+            //accordion
+            #accordionExample.accordion
+                .card
+                    #headingOne.card-header
+                        h2.mb-0
+                            button.btn.btn-link.collapsed(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                                | Collapsible Group Item #1
+                    #collapseOne.collapse(aria-labelledby='headingOne', data-parent='#accordionExample')
+                        .card-body
+                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                .card
+                    #headingTwo.card-header
+                        h2.mb-0
+                            button.btn.btn-link.collapsed( type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                                | Collapsible Group Item #2
+                    #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionExample')
+                        .card-body
+                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                .card
+                    #headingThree.card-header
+                        h2.mb-0
+                            button.btn.btn-link.collapsed(type='button', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                                | Collapsible Group Item #3
+                    #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionExample')
+                        .card-body
+                            | Anim pariatur cliche  reprehendert, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
         //script(src="js/jquery-3.2.1.js")
         script(src="js/demo.js")
